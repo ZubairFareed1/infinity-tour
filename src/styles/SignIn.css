@@ -1,0 +1,19 @@
+/* Sign In Page css */
+.signin-container{
+    background-image: url('./formbg.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:-150px;
+    position: relative !important;
+}
+.signin-form {
+    position: absolute;
+    top: 5rem;          /* Adjust this value as needed for spacing from the top */
+    right: 5rem;        /* Adjust this value as needed for spacing from the right */
+    padding: 2rem;      /* Add padding for better appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for a card effect */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    backdrop-filter: blur(5px) !important;
+  }
+

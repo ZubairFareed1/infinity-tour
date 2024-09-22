@@ -37,9 +37,21 @@
   }
 
   /* Adding padding for Nav */
-.navbar-wrapper nav ul li {
+/* .navbar-wrapper nav ul li   {
     padding: 0.5rem 1rem; /* Adjust padding as needed */
-}
+  
+    nav ul li a.active{
+      background-color: dodgerblue;
+      color: white !important;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      
+    }
+
+    nav ul li a.active:hover{
+      background-color: dodgerblue !important;
+      color: white !important;
+        }
+
 
 
 

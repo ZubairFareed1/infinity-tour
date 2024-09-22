@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className='hidden fixed top-0 left-0 w-full lg:flex align-items-center justify-content-between h-6rem px-8 navbar-wrapper bg-blue-50 shadow-2'>
+      <div className='hidden fixed top-0 left-0 w-full lg:flex align-items-center justify-content-between h-6rem px-4 xl:px-8 navbar-wrapper bg-blue-50 shadow-2'>
         {/* Logo */}
         <div>
           <NavLink to="/">
@@ -29,13 +29,13 @@ export default function Navbar() {
         {/* Links */}
         <nav>
           <ul className='flex gap-2 list-none'>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/">Home</NavLink></li>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/destination">Destination</NavLink></li>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/packages">Packages</NavLink></li>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/offers">Offers</NavLink></li>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/blog">Blog</NavLink></li>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/aboutus">About Us</NavLink></li>
-            <li className='border-1 border-green-300 '><NavLink className='no-underline  border-1 text-base font-semibold text-900' to="/contactus">Contact Us</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/">Home</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/destination">Destination</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/packages">Packages</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/offers">Offers</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/blog">Blog</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/aboutus">About Us</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/contactus">Contact Us</NavLink></li>
           </ul>
         </nav>
 

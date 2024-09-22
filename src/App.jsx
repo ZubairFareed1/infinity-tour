@@ -14,11 +14,13 @@ import SignUp from './pages/SignUp';
 
 import Navbar from './components/Navbar';
 import {Routes, Route} from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 export default function App() {
+  const location = useLocation();
   return (
     <div className=''>
 
-        <Navbar/>
+       {(location.pathname=="/signin")?'':<Navbar/>} 
 
         <Routes>
           <Route path='/' element={<Home/>}/>
