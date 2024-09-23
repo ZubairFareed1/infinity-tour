@@ -3,7 +3,7 @@ import { useNavigate, NavLink } from 'react-router-dom';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';
 import logo from '../assets/logo.png';
-import './Navbar.css';
+import '../styles/Navbar.css';
 
 // icons
 import { HiMenu, HiX } from "react-icons/hi";
@@ -84,6 +84,8 @@ export default function Navbar() {
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/blog" onClick={toggleMenu}>Blog</NavLink></li>
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/aboutus" onClick={toggleMenu}>About Us</NavLink></li>
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/contactus" onClick={toggleMenu}>Contact Us</NavLink></li>
+                <Divider />
+                <Button label="Sign in" className='w-full' size='large' onClick={() => navigate('/signin')} />
               </ul>
             </nav>
           </div>

@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Image } from 'primereact/image';
-import { IconField } from 'primereact/iconfield';
-import { InputIcon } from 'primereact/inputicon';
-import { InputText } from 'primereact/inputtext';
+
 import {Divider} from 'primereact/divider';
 import { Button } from 'primereact/button';
 import logo from '../assets/logo.png';
-import { FaUser } from "react-icons/fa";
-import { RiLockPasswordFill } from "react-icons/ri";
+
 
 
 import '../styles/SignIn.css';
 import 'primeicons/primeicons.css'; // Ensure this line is included
+
+import { useAuth } from '../contexts/AuthContext';
 
 
 export default function SignIn() {
@@ -20,13 +19,15 @@ export default function SignIn() {
   const [password, setPassword] = useState('');
   // const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
+  const {login} = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your sign-in logic here
     console.log('Signing in with:', email, password);
-    if(password==='abcd'&&email==='abc@gmail.com'){
-      navigate('/'); // Example navigation
+    if(password==='Jamali@1212'&&email==='jamali1212@gmail.com'){
+      login();
+      navigate('/dashboard'); // Example navigation
     }else{
       alert('Invalid Credentials');
     }
