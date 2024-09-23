@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { Button } from 'primereact/button';
+import { Divider } from 'primereact/divider';
 import logo from '../assets/logo.png';
 import './Navbar.css';
 
@@ -13,6 +14,7 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    !showMenu ? document.body.style.overflow = 'hidden': document.body.style.overflow = 'auto';
   };
 
   return (
@@ -62,27 +64,26 @@ export default function Navbar() {
 
       {/* Side Menu Overlay */}
       
-        <div className={`fixed inset-0 bg-black-alpha-40 blur-filter z-50 transition-all transition-duration-300 ${showMenu ? 'block' : 'hidden'}`} onClick={toggleMenu}>
-          <div className={`fixed top-0 right-0 w-16rem h-full bg-white p-5 shadow-4 z-50 transform transition-transform transition-duration-300 ${showMenu ? 'translate-x-0' : '-translate-x-100'}`} onClick={(e) => e.stopPropagation()}>
-            <div className='flex align-items-center justify-content-between mb-3'>
-              {/* Logo in Side Menu */}
-              <NavLink to="/" onClick={toggleMenu}>
-                <img src={logo} alt="Logo" className='w-5rem'/>
-              </NavLink>
+        <div className={`fixed inset-0 bg-black-alpha-40 blur-filter z-5 transition-all transition-duration-300 ${showMenu ? 'block' : 'hidden'}`} onClick={toggleMenu}>
+          <div className={`fixed top-0 right-0 w-16rem h-full bg-white p-2 shadow-4 z-50 transform transition-transform transition-duration-300 ${showMenu ? 'translate-x-0' : '-translate-x-100'}`} onClick={(e) => e.stopPropagation()}>
+            <div className='flex align-items-center justify-content-end mb-3 py-2'>
+             
               {/* Close Icon */}
-              <HiX className='text-2xl cursor-pointer' onClick={toggleMenu} />
+              <HiX className='text-4xl cursor-pointer ' onClick={toggleMenu} />
             </div>
             
             {/* Side Menu Links */}
-            <nav>
-              <ul className='flex flex-column gap-3 list-none'>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/" onClick={toggleMenu}>Home</NavLink></li>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/destination" onClick={toggleMenu}>Destination</NavLink></li>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/packages" onClick={toggleMenu}>Packages</NavLink></li>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/offers" onClick={toggleMenu}>Offers</NavLink></li>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/blog" onClick={toggleMenu}>Blog</NavLink></li>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/aboutus" onClick={toggleMenu}>About Us</NavLink></li>
-                <li><NavLink className='no-underline text-base font-semibold text-900' to="/contactus" onClick={toggleMenu}>Contact Us</NavLink></li>
+            <nav className=''>
+            <Divider />
+
+              <ul className=''>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/" onClick={toggleMenu}>Home</NavLink></li>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/destination" onClick={toggleMenu}>Destination</NavLink></li>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/packages" onClick={toggleMenu}>Packages</NavLink></li>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/offers" onClick={toggleMenu}>Offers</NavLink></li>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/blog" onClick={toggleMenu}>Blog</NavLink></li>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/aboutus" onClick={toggleMenu}>About Us</NavLink></li>
+                <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/contactus" onClick={toggleMenu}>Contact Us</NavLink></li>
               </ul>
             </nav>
           </div>

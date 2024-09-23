@@ -1,30 +1,3 @@
-/* Custom styling for Menubar */
-.p-menubar {
-  /* background-color: #4CAF50 !important; Change background color */
-  border: none !important; /* Remove border */
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.p-menubar-root-list {
-  padding: 0 10px;
-  margin-right: 10px !important;
-}
-
-.p-menuitem-link {
-  color: white !important; /* Change text color */
-  padding: 10px 15px !important; /* Adjust padding */
-}
-
-.p-menuitem-link:hover {
-  background-color: #3280ed !important; /* Change hover background */
-}
-
-.p-menubar .p-menuitem-link:focus {
-    /* outline: none !important;  Remove the focus outline */
-    background-color: transparent !important; /* Remove focus background */
-    /* box-shadow: none !important; Remove any box-shadow if present */
-  }
 
   .inset-0{
     top:0;
@@ -51,6 +24,11 @@
       background-color: dodgerblue !important;
       color: white !important;
         }
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
 
 
 
