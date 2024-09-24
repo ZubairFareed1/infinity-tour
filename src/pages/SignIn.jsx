@@ -47,16 +47,16 @@ export default function SignIn() {
       <div className='w-screen md:w-20rem h-screen md:h-30rem bg-white-alpha-80 shadow-4 md:border-round-md border-noround card p-4'>
         <div>
           <div className='flex justify-content-center'>
-            <Image src={logo} alt="logo" height="70" />
+            <Image src={logo} alt="logo" height="80" />
           </div>
 
           <div className='flex justify-content-center'>
-            <h2 className='my-0 text-3xl text-600'>Login</h2>
+            <h2 className='mt-0 text-3xl text-600'>Login</h2>
           </div>
 
           <form onSubmit={handleSubmit} className='mt-2'>
             <div className="h-3rem mb-3 ">
-              <input type="email" placeholder='Email address' className='w-full h-full pl-2 text-base custom-input' value={email} onChange={handleEmail}/>
+              <input type="email" placeholder='Email address' className='w-full h-full pl-2 text-base custom-input' value={email} onChange={handleEmail}/> 
             </div>
 
             <div className="h-3rem mb-6">

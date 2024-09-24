@@ -1,3 +1,29 @@
 .active{
     background-color: dodgerblue;
 }
+
+.px-9 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.px-10 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+.px-11 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.px-12 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+.px-13 {
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+.px-14 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}

@@ -1,1 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.responsive {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  @media (min-width: 640px) { /* Tablet */
+    .responsive {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Laptop */
+    .responsive {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+  
+  @media (min-width: 1280px) { /* Large Screen */
+    .responsive {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }

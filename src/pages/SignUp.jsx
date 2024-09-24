@@ -49,11 +49,11 @@ export default function SignIn() {
       <div className='w-screen md:w-20rem h-screen md:h-auto bg-white-alpha-80 shadow-4 md:border-round-md border-noround card p-4'>
         <div>
           <div className='flex justify-content-center'>
-            <Image src={logo} alt="logo" height="70" />
+            <Image src={logo} alt="logo" height="80" />
           </div>
 
           <div className='flex justify-content-center'>
-            <h2 className='my-0 text-3xl text-600'>Sign Up</h2>
+            <h2 className='mt-0 text-3xl text-600'>Sign Up</h2>
           </div>
 
           <form onSubmit={handleSubmit} className='mt-2'>

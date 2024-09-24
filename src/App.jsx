@@ -10,17 +10,20 @@ import ContactUs from './pages/ContactUs';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
+import Page404 from './pages/Page404';
 
+const predefinedRoutes = [ '/', '/destination', '/contactus', '/packages', '/blog', '/aboutus', '/offers'];
 import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
 import {Routes, Route} from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 export default function App() {
   const location = useLocation();
+  const shouldHideNavbar = predefinedRoutes.includes(location.pathname);
   return (
-    <div className=''>
+    <div className='' style={{backgroundColor:'#F8F8F8'}}>
 
-       {(location.pathname=="/signin"||location.pathname=="/signup"||location.pathname=='/dashboard')?'':<Navbar/>} 
+       {shouldHideNavbar && <Navbar/>} 
 
         <Routes>
           <Route path='/signin' element={<SignIn/>}/>
@@ -34,6 +37,8 @@ export default function App() {
           <Route path='/blog' element={<Blogs/>}/>
           <Route path='/aboutus' element={<AboutUs/>}/>
           <Route path='/offers' element={<Offers/>}/>
+          <Route path='*' element={<Page404/>}/>
+          {/* Protected Routes */}
           <Route path='/dashboard' element={
             <ProtectedRoute>
               <Dashboard/>

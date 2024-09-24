@@ -20,22 +20,22 @@ const Dashboard = () => {
         <h1>Dashboard</h1>
       </header>
       <div className="dashboard-content">
-        <nav className="dashboard-sidebar">
+        <nav className="dashboard-sidebar w-7rem md:w-10rem lg:20rem">
           <ul>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#reports">Reports</a></li>
             <li><a href="#settings">Settings</a></li>
             <li><a href="#profile">Profile</a></li>
-            <li><Button onClick={handleLogout} >Logout</Button></li>
+            <li><Button onClick={handleLogout} severity='danger'>Logout</Button></li>
           </ul>
         </nav>
         <main className="dashboard-main">
           <h2>Welcome to the Dashboard!</h2>
           <p>This is your main content area. You can add charts, tables, and other components here.</p>
-          <div className="stats">
-            <div className="stat-card">Stat 1</div>
-            <div className="stat-card">Stat 2</div>
-            <div className="stat-card">Stat 3</div>
+          <div className="flex flex-column md:flex-row gap-3">
+            <div className="stat-card bg-yellow-500">Stat 1</div>
+            <div className="stat-card bg-green-500">Stat 2</div>
+            <div className="stat-card bg-pink-300">Stat 3</div>
           </div>
         </main>
       </div>

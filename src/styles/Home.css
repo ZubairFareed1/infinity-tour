@@ -1,0 +1,31 @@
+.main-home {
+    padding-top: 100px;
+}
+
+.btn-card-desktop {
+    width: 120%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    
+}
+
+.scalex-1 {
+    transform: scaleX(-1);
+}
+
+.custum-input{
+    outline: 0.5px;
+    transition: border-color 0.3s ease;
+}
+
+.custum-input:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 2px dodgerblue;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+
