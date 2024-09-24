@@ -58,18 +58,18 @@ export default function Home() {
 
       {/* Benifits section */}
       <div className='responsive border-1 my-5 py-3 bg-white'>
-        <div className='flex w-full gap-3' >
-          <div className='w-4 border-1'>
+        <div className='flex w-full gap-3 flex-column lg:flex-row' >
+          <div className='w-12 lg:w-4 border-1'>
             <span className='text-blue-600 text-xs'>What we give</span>
             <h2>Best Features
             For You</h2>
             <p className='text-base'>we will provide the best features for those of you who want to travel comfortably with your family.</p>
 
           </div>
-          <div className='flex w-8 gap-4'>
-              <div className='w-4 border-1 h-10rem border-200 surface-50'>1</div>
-              <div className='w-4 border-1 h-10rem border-200 surface-50'>2</div>
-              <div className='w-4 border-1 h-10rem border-200 surface-50'>3</div>
+          <div className='flex flex-column lg:flex-row w-12 lg:w-8 gap-4 '>
+              <div className='lg:w-4 w-12  border-1 h-10rem border-200 surface-50'>1</div>
+              <div className='lg:w-4 w-12  border-1 h-10rem border-200 surface-50'>2</div>
+              <div className='lg:w-4 w-12  border-1 h-10rem border-200 surface-50'>3</div>
           </div>
         </div>
 
