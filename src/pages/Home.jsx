@@ -2,6 +2,12 @@ import React from 'react'
 import '../styles/Home.css'
 import plane from '../assets/plane.png'
 import { IoSearchOutline } from "react-icons/io5";
+import { BiSolidDirections } from "react-icons/bi";
+import { GiChoice } from "react-icons/gi";
+import { IoBookmark } from "react-icons/io5";
+
+
+
 
 
 export default function Home() {
@@ -57,22 +63,41 @@ export default function Home() {
       </div>
 
       {/* Benifits section */}
-      <div className='responsive border-1 my-5 py-3 bg-white'>
+      <div className='responsive mt-5 py-5 bg-white'>
         <div className='flex w-full gap-3 flex-column lg:flex-row' >
-          <div className='w-12 lg:w-4 border-1'>
+          <div className='w-12 lg:w-4'>
             <span className='text-blue-600 text-xs'>What we give</span>
-            <h2>Best Features
+            <h2 className='font-medium my-1'><span className='font-bold'>Best</span> Features
             For You</h2>
-            <p className='text-base'>we will provide the best features for those of you who want to travel comfortably with your family.</p>
+            <p className='text-base text-color-secondary'>we will provide the best features for those of you who want to travel comfortably with your family.</p>
 
           </div>
           <div className='flex flex-column lg:flex-row w-12 lg:w-8 gap-4 '>
-              <div className='lg:w-4 w-12  border-1 h-10rem border-200 surface-50'>1</div>
-              <div className='lg:w-4 w-12  border-1 h-10rem border-200 surface-50'>2</div>
-              <div className='lg:w-4 w-12  border-1 h-10rem border-200 surface-50'>3</div>
+              <div className='lg:w-4 w-12  border-1 border-100 p-3 border-round-md hover:shadow-3 cursor-pointer'>
+                <div className='w-3rem h-3rem bg-blue-100 border-round-md flex justify-content-center align-items-center '><GiChoice className='text-xl text-blue-600' /></div>
+                <h3 className='mt-2 text-base text-800 mb-0'>Lots of Choices</h3>
+                <p className='text-xs text-color-secondary mt-0 '>we have provided several choices of destinations and very cheap traveling packages.</p>
+              </div>
+
+              <div className='lg:w-4 w-12  border-1 border-100 p-3 border-round-md hover:shadow-3 cursor-pointer'>
+                <div className='w-3rem h-3rem bg-blue-100 border-round-md  flex justify-content-center align-items-center'><BiSolidDirections className='text-xl text-blue-600'/></div>
+                <h3 className='mt-2 text-base text-800 mb-0'>Best Tour Guide</h3>
+                <p className='text-xs text-color-secondary mt-0 '>we will provide the professional tour guide and provide the people who understand the place.</p>
+              </div>
+
+              <div className='lg:w-4 w-12  border-1 border-100 p-3 border-round-md hover:shadow-3 cursor-pointer'>
+                <div className='w-3rem h-3rem bg-blue-100 border-round-md  flex justify-content-center align-items-center'><IoBookmark className='text-xl text-blue-600'/></div>
+                <h3 className='mt-2 text-base text-800 mb-0'>Easy Booking</h3>
+                <p className='text-xs text-color-secondary mt-0 '>we will also make it easier for users to book the tickets or places you want to go.</p>
+              </div>
           </div>
         </div>
 
+
+      </div>
+
+      {/* About section */}
+      <div className='border-1 h-15rem'>
 
       </div>
          
