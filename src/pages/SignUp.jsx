@@ -45,7 +45,7 @@ export default function SignIn() {
 
 
   return (
-    <div className='signin-container h-screen flex align-items-center justify-content-center bg-blue-100'>
+    <div className='signin-container h-screen flex align-items-center justify-content-center bg-blue-50'>
       <div className='w-screen md:w-20rem h-screen md:h-auto bg-white-alpha-80 shadow-4 md:border-round-md border-noround card p-4'>
         <div>
           <div className='flex justify-content-center'>

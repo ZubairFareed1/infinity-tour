@@ -26,3 +26,46 @@
       padding-right: 150px;
     }
   }
+
+
+  
+.fluid-responsive {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.fluid-responsive > .destination-section:first-child {
+  border-radius: 0px;
+}
+
+/* Tablet */
+@media (min-width: 640px) { 
+  .fluid-responsive {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .fluid-responsive > .destination-section:first-child {
+    border-radius: 24px;
+  }
+}
+
+@media (min-width: 1024px) { /* Laptop */
+  .fluid-responsive {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .fluid-responsive > .destination-section:first-child {
+    border-radius: 24px;
+  }
+}
+
+@media (min-width: 1280px) { /* Large Screen */
+  .fluid-responsive {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .fluid-responsive > .destination-section:first-child {
+    border-radius: 24px;
+  }
+}

@@ -10,6 +10,26 @@
     
 }
 
+.btn-card-destination {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    transform: translateY(50%);
+   
+}
+
+@media (min-width: 640px) {
+    .btn-card-destination {
+    width: 80%;
+    }
+}
+
+@media (min-width: 1024px){
+    .btn-card-destination {
+        width: 60%;
+    }
+}
+
 .scalex-1 {
     transform: scaleX(-1);
 }
@@ -27,5 +47,6 @@
     border-bottom-right-radius: 0px;
 
 }
+
 
 
