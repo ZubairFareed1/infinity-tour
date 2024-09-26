@@ -48,5 +48,20 @@
 
 }
 
+.offer-section {
+    background-image: url('offer_section_1.png'), url('offer_section_2.png');
+    background-position: left bottom, right bottom;
+    background-size: 150px, 120px;
+    background-repeat: no-repeat, no-repeat;
+    
+   }
+
+@media (max-width:640px) {
+    .offer-section {
+        background-size: 100px, 80px;
+    }
+}
+
+
 
 

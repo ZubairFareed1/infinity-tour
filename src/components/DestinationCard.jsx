@@ -24,8 +24,8 @@ export default function DestinationCard({ data }) {
                 </div>
                 <div className='p-3 flex flex-column gap-4'>
                     <div className='flex justify-content-between align-items-center'>
-                        <h3 className=''>{name}</h3>
-                        <div className='flex align-items-center gap-1'><IoStar style={{color:'#FF9529'}} className='text-sm ' /> <span className='text-sm'>{rating} / ({formatReviews(reviews)})</span> </div>
+                        <h3 className='text-600'>{name}</h3>
+                        <div className='flex align-items-center gap-1'><IoStar style={{color:'#FF9529'}} className='text-sm ' /> <span className='text-sm text-color-secondary'>{rating} / ({formatReviews(reviews)})</span> </div>
                     </div>
                     <button className='py-2 bg-transparent border-1 border-primary text-primary hover:bg-primary-50 cursor-pointer' onClick={()=>{navigate('/destination')}}>Detail</button>
                 </div>

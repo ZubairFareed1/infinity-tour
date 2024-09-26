@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const navigate = useNavigate();
-  const [search, setSearch] = useState('');
+  const [searchDestination, setSearchDestination] = useState('');
   const [destination, setDestination] = useState([
     {
       id: 1,
@@ -105,7 +105,7 @@ export default function Home() {
         <div className='flex w-full gap-3 flex-column lg:flex-row' >
           <div className='w-12 lg:w-4 '>
             <span className='text-blue-600 text-sm font-semibold block text-center md:text-left'>What we give</span>
-            <h2 className='my-1 text-2xl md:text-4xl text-center md:text-left'><span className='font-bold'>Best Features </span>
+            <h2 className='my-1 text-2xl md:text-4xl text-700 text-center md:text-left'><span className='font-bold'>Best Features </span>
               <span><br /></span>For You</h2>
             <p className='text-base text-color-secondary text-center md:text-left'>we will provide the best features for those of you who want to travel comfortably with your family.</p>
 
@@ -146,7 +146,7 @@ export default function Home() {
             <div className='w-12 mt-2'>
 
               <span className='text-blue-600 text-sm font-semibold block text-center lg:text-left'>About</span>
-              <h2 className='font-medium mt-2 mb-1 text-2xl md:text-4xl text-center lg:text-left'><span className='font-bold inline md:block'>We Recommend</span> Beautiful Destinations Every Month</h2>
+              <h2 className='font-medium mt-2 mb-1 text-700 text-2xl md:text-4xl text-center lg:text-left'><span className='font-bold inline md:block'>We Recommend</span> Beautiful Destinations Every Month</h2>
               <p className='text-base text-color-secondary text-center lg:text-left'>Explore your dream destinations with us! We offer top travel spots and highlight the best deals every month, ensuring unforgettable experiences at every destination.</p>
               <div className='flex flex-column md:flex-row gap-2 md:gap-4 w-12 mt-6 '>
                 <div className='border-100 border-1 border-round-md surface-card w-12 md:w-4 p-2 shadow-2'>
@@ -174,7 +174,7 @@ export default function Home() {
       <div className='fluid-responsive mb-5'>
         <div className='w-12 border-1 border-200 bg-gray-100 pt-4 px-2 flex flex-column destination-section'>
           <span className='text-blue-600 text-sm font-semibold block text-center'>Top Destinations</span>
-          <h2 className='font-medium mt-2 mb-1 text-2xl md:text-4xl text-center' ><span className='font-bold'>Let’s Explore</span> your Dream <span className='hidden md:inline'><br /></span> Country Destinations Here!</h2>
+          <h2 className='font-medium mt-2 mb-1 text-700 text-2xl md:text-4xl text-center' ><span className='font-bold'>Let’s Explore</span> your Dream <span className='hidden md:inline'><br /></span> Country Destinations Here!</h2>
           <p className='text-base text-600 text-center md:px-8 lg:px-16'>We have Recommended Papular Destinations every week so you don’t have to worry about your dream destinations with Infinity tour.</p>
           {/* Input for destination */}
           <div className='flex justify-content-center'>
@@ -204,9 +204,23 @@ export default function Home() {
           }
         </div>
         <div className='flex justify-content-center mt-3 md:mt-4  '>
-          <button className='py-2 px-5 border-none bg-blue-400 hover:bg-blue-600 border-round-sm text-lg text-white' onClick={()=>{navigate("/destination")}}>View All</button>
+          <button className='py-2 px-5 border-none bg-blue-500 hover:bg-blue-600 border-round-sm text-lg text-white cursor-pointer' onClick={()=>{navigate("/destination")}}>View All</button>
         </div>
         
+
+      </div>
+
+
+      {/* Offer section */}
+      <div className='fluid-responsive'>
+        <div className='h-15rem mt-3 mb-6 sm:border-round-xl shadow-1 offer-section bg-primary-100 p-4'>
+        <h2 className='text-center text-2xl md:text-4xl font-medium text-700 ' ><span className='font-bold'>Let’s Don’t Miss The <span className='text-red-400'>20% Discount</span> &</span><span className='hidden md:inline'><br /></span> Explore the Beauty of the World</h2>
+        <p className='text-center text-600 mt-2'>We have many special offers for you.</p>
+        <div className='flex justify-content-center mt-3  '>
+          <button className='py-2 px-5 border-none bg-blue-500 hover:bg-blue-600 border-round-sm text-lg text-white cursor-pointer' onClick={()=>{navigate("/offers")}}>Get Started</button>
+        </div>
+
+        </div>
 
       </div>
 
