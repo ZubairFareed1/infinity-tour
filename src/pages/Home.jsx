@@ -40,15 +40,16 @@ export default function Home() {
       image: indonesiaImg,
       reviews: 8700,
       rating: 5.0
-    },
-    {
-      id: 4,
-      name: 'Germany',
-      image: germanyImg,
-      reviews: 12220,
-      rating: 4.5
     }
   ])
+  const [searchTour, SetSearchTour] = useState('');
+  const handleSearchTour = (e) =>{
+    e.preventDefault();
+    if(searchTour.trim() !== ''){
+      navigate(`/pachages/${searchTour}`)
+    }
+
+  }
   return (
     <div className='main-home w-full'>
       {/* Hero section */}
@@ -66,8 +67,8 @@ export default function Home() {
           <div className='btn-card-desktop hidden lg:flex h-4rem border-1 border-blue-200 border-round-md surface-0 shadow-1'>
             <div className=' w-12 mx-2 my-2 flex align-items-center surface-50 border-round-sm'>
 
-              <form action="" className='flex h-full w-full'>
-                <input type="text" placeholder='Search Tour...' className='w-full focus:border-none border-none custum-input pl-2 bg-transparent text-base ' />
+              <form onSubmit={handleSearchTour} className='flex h-full w-full'>
+                <input type="text" placeholder='Search Tour...' className='w-full focus:border-none border-none custum-input pl-2 bg-transparent text-base ' onChange={(e)=>{SetSearchTour(e.target.value)}} value={searchTour}  />
                 <button className='py-2 px-4 border-none bg-blue-400 hover:bg-blue-600 border-round-right-sm'>
                   <IoSearchOutline className='text-white text-2xl te font-semibold' />
                 </button>
@@ -172,10 +173,10 @@ export default function Home() {
 
       {/* Destinations section */}
       <div className='fluid-responsive mb-5'>
-        <div className='w-12 border-1 border-200 bg-gray-100 pt-4 px-2 flex flex-column destination-section'>
+        <div className='w-12 border-1 border-200 bg-gray-50 pt-4 px-2 flex flex-column destination-section'>
           <span className='text-blue-600 text-sm font-semibold block text-center'>Top Destinations</span>
           <h2 className='font-medium mt-2 mb-1 text-700 text-2xl md:text-4xl text-center' ><span className='font-bold'>Let’s Explore</span> your Dream <span className='hidden md:inline'><br /></span> Country Destinations Here!</h2>
-          <p className='text-base text-600 text-center md:px-8 lg:px-16'>We have Recommended Papular Destinations every week so you don’t have to worry about your dream destinations with Infinity tour.</p>
+          <p className='text-base text-color-secondary text-center md:px-8 lg:px-16'>We have Recommended Papular Destinations every week so you don’t have to worry about your dream destinations with Infinity tour.</p>
           {/* Input for destination */}
           <div className='flex justify-content-center'>
 
@@ -200,13 +201,13 @@ export default function Home() {
           {
             destination.map((item) => (
               <DestinationCard data={item} key={item.id} />
-           ))
+            ))
           }
         </div>
         <div className='flex justify-content-center mt-3 md:mt-4  '>
-          <button className='py-2 px-5 border-none bg-blue-500 hover:bg-blue-600 border-round-sm text-lg text-white cursor-pointer' onClick={()=>{navigate("/destination")}}>View All</button>
+          <button className='py-2 px-5 border-none bg-blue-500 hover:bg-blue-600 border-round-sm text-lg text-white cursor-pointer' onClick={() => { navigate("/destination") }}>View All</button>
         </div>
-        
+
 
       </div>
 
@@ -214,13 +215,33 @@ export default function Home() {
       {/* Offer section */}
       <div className='fluid-responsive'>
         <div className='h-15rem mt-3 mb-6 sm:border-round-xl shadow-1 offer-section bg-primary-100 p-4'>
-        <h2 className='text-center text-2xl md:text-4xl font-medium text-700 ' ><span className='font-bold'>Let’s Don’t Miss The <span className='text-red-400'>20% Discount</span> &</span><span className='hidden md:inline'><br /></span> Explore the Beauty of the World</h2>
-        <p className='text-center text-600 mt-2'>We have many special offers for you.</p>
-        <div className='flex justify-content-center mt-3  '>
-          <button className='py-2 px-5 border-none bg-blue-500 hover:bg-blue-600 border-round-sm text-lg text-white cursor-pointer' onClick={()=>{navigate("/offers")}}>Get Started</button>
-        </div>
+          <h2 className='text-center text-2xl md:text-4xl font-medium text-700 ' ><span className='font-bold'>Let’s Don’t Miss The <span className='text-red-400'>20% Discount</span> &</span><span className='hidden md:inline'><br /></span> Explore the Beauty of the World</h2>
+          <p className='text-center text-600 mt-2'>We have many special offers for you.</p>
+          <div className='flex justify-content-center mt-3  '>
+            <button className='py-2 px-5 border-none bg-blue-500 hover:bg-blue-600 border-round-sm text-lg text-white cursor-pointer' onClick={() => { navigate("/offers") }}>Get Started</button>
+          </div>
 
         </div>
+
+      </div>
+
+
+
+      {/* Gallery section */}
+      <div className='responsive my-6'>
+        <h2 className='text-700 text-2xl md:text-4xl text-center'>Gallery</h2>
+        <p className='text-base text-color-secondary text-center mt-2'>Browse our gallery to see stunning views from top travel destinations. <span className='md:inline hidden'><br /></span>Let the photos inspire your next journey!</p>
+
+        <div className='gallery-div h-30rem lg:h-25rem mt-3'>
+            <div className="div1 border-round-sm"> </div>
+            <div className="div2 border-round-sm"></div>
+            <div className="div3 border-round-sm"> </div>
+            <div className="div4 border-round-sm"> </div>
+            <div className="div5 border-round-sm"> </div>
+            <div className="div6 border-round-sm"> </div>
+        </div>
+        
+
 
       </div>
 

@@ -18,9 +18,9 @@ export default function DestinationCard({ data }) {
     const { name, rating, reviews, image} = data; // Destructure data
 
     return (
-        <div className="w-12 md:w-6 lg:w-3">
-        <div className='mx-4 my-3 md:m-1 surface-card border-1 border-200 shadow-2 border-round-sm overflow-hidden'>
-                <div className='bg-no-repeat bg-cover bg-center h-12rem md:h-10rem lg:h-8rem ' style={{backgroundImage:`url(${image})`}}>
+        <div className="w-12 md:w-6 lg:w-4 inline-block">
+        <div className='mx-4 my-3 md:m-2 surface-card border-1 border-200 shadow-2 border-round-sm overflow-hidden'>
+                <div className='bg-no-repeat bg-cover bg-center h-13rem md:h-10rem ' style={{backgroundImage:`url(${image})`}}>
                 </div>
                 <div className='p-3 flex flex-column gap-4'>
                     <div className='flex justify-content-between align-items-center'>
