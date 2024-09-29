@@ -4,8 +4,6 @@ import { Image } from 'primereact/image';
 
 import {Divider} from 'primereact/divider';
 import { Button } from 'primereact/button';
-import logo from '../assets/logo.png';
-
 
 
 import '../styles/SignIn.css';
@@ -47,7 +45,7 @@ export default function SignIn() {
       <div className='w-screen md:w-20rem h-screen md:h-30rem bg-white-alpha-80 shadow-4 md:border-round-md border-noround card p-4'>
         <div>
           <div className='flex justify-content-center'>
-            <Image src={logo} alt="logo" height="80" />
+            <Image src='logo2.png' alt="logo" height="80" />
           </div>
 
           <div className='flex justify-content-center'>

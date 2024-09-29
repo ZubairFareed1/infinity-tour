@@ -300,7 +300,7 @@ export default function Home() {
         <h2 className='text-700 text-2xl md:text-4xl text-center'>Get in Touch with Us</h2>
         <p className='text-base text-color-secondary text-center mt-2'>Have questions or need more information? We're here to help! Contact us for personalized assistance with your travel plans, and let us guide you toward your next unforgettable adventure.</p>
         <div className='flex justify-content-center mt-4'>
-          <form className='flex md:flex-row flex-column gap-3 h-full' onSubmit={(e)=>{e.preventDefault()}}>
+          <form className='flex md:flex-row flex-column gap-2 h-full' onSubmit={(e)=>{e.preventDefault()}}>
               <div className='flex flex-column h-11rem w-18rem justify-content-between'>
                     <div className="">
                     <input type="text" placeholder='Name' className='py-3 w-full h-full pl-2 text-base custom-input'/> 
@@ -316,7 +316,7 @@ export default function Home() {
                     <div className="h-7rem">
                     <textarea  placeholder='Message...' className='w-full h-full pl-2 text-base custom-input'/> 
                     </div>
-                    <button className='py-3 px-5 border-none text-sm border-round-sm bg-primary hover:bg-primary-700 cursor-pointer text-white font-semibold'>Sent Message</button>
+                    <button className='py-3 px-5 border-none text-sm border-round-sm bg-primary-600 hover:bg-primary-700 cursor-pointer text-white font-semibold'>Sent Message</button>
 
 
               </div>

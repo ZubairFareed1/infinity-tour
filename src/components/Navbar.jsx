@@ -5,6 +5,7 @@ import { Divider } from 'primereact/divider';
 import logo from '../assets/logo.png';
 import '../styles/Navbar.css';
 
+
 // icons
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -24,7 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <NavLink to="/">
-            <img src={logo} alt="Logo" className='w-5rem'/>
+            <img src='logo2.png' alt="Logo" className='w-10rem'/>
           </NavLink>
         </div>
 
@@ -43,7 +44,7 @@ export default function Navbar() {
 
         {/* Button */}
         <div>
-          <Button label="Sign in" size='large' onClick={() => navigate('/signin')} />
+          <Button label="Sign in" size='large' className='bg-primary-600' onClick={() => navigate('/signin')} />
         </div>
       </div>
 
