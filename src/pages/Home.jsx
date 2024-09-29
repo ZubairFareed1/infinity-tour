@@ -13,8 +13,10 @@ import germanyImg from '../assets/germany 1.jpg';
 import { useNavigate } from 'react-router-dom';
 
 
-
-
+import avatar1 from '../assets/avatar1.jpg'
+import avatar2 from '../assets/instructor2.jpg'
+import avatar3 from '../assets/avator4.webp'
+import TestimonalCard from '../components/TestimonalCard';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -42,10 +44,31 @@ export default function Home() {
       rating: 5.0
     }
   ])
+
+  const [testimonals, setTestimonals] = useState([
+    {
+      id: 1,
+      name: 'Ethan Parker',
+      avatar: avatar1,
+      testimonal: `An unforgettable experience! The tour was well-organized, and the guides were knowledgeable. Can't wait for my next trip!`
+    },
+    {
+      id: 2,
+      name: 'Liam Bennett',
+      avatar: avatar2,
+      testimonal: `Beautiful destinations and seamless planning. Every detail was taken care of, making it a stress-free and enjoyable adventure.`
+    },
+    {
+      id: 3,
+      name: 'Sophia Mitchell',
+      avatar: avatar3,
+      testimonal: `Highly recommend this tour service! The itinerary was perfect, and we got to explore hidden gems at every stop.`
+    }
+  ])
   const [searchTour, SetSearchTour] = useState('');
-  const handleSearchTour = (e) =>{
+  const handleSearchTour = (e) => {
     e.preventDefault();
-    if(searchTour.trim() !== ''){
+    if (searchTour.trim() !== '') {
       navigate(`/pachages/${searchTour}`)
     }
 
@@ -68,7 +91,7 @@ export default function Home() {
             <div className=' w-12 mx-2 my-2 flex align-items-center surface-50 border-round-sm'>
 
               <form onSubmit={handleSearchTour} className='flex h-full w-full'>
-                <input type="text" placeholder='Search Tour...' className='w-full focus:border-none border-none custum-input pl-2 bg-transparent text-base ' onChange={(e)=>{SetSearchTour(e.target.value)}} value={searchTour}  />
+                <input type="text" placeholder='Search Tour...' className='w-full focus:border-none border-none custum-input pl-2 bg-transparent text-base ' onChange={(e) => { SetSearchTour(e.target.value) }} value={searchTour} />
                 <button className='py-2 px-4 border-none bg-blue-400 hover:bg-blue-600 border-round-right-sm'>
                   <IoSearchOutline className='text-white text-2xl te font-semibold' />
                 </button>
@@ -233,17 +256,42 @@ export default function Home() {
         <p className='text-base text-color-secondary text-center mt-2'>Browse our gallery to see stunning views from top travel destinations. <span className='md:inline hidden'><br /></span>Let the photos inspire your next journey!</p>
 
         <div className='gallery-div h-30rem lg:h-25rem mt-3'>
-            <div className="div1 border-round-sm"> </div>
-            <div className="div2 border-round-sm"></div>
-            <div className="div3 border-round-sm"> </div>
-            <div className="div4 border-round-sm"> </div>
-            <div className="div5 border-round-sm"> </div>
-            <div className="div6 border-round-sm"> </div>
+          <div className="div1 border-round-sm"> </div>
+          <div className="div2 border-round-sm"></div>
+          <div className="div3 border-round-sm"> </div>
+          <div className="div4 border-round-sm"> </div>
+          <div className="div5 border-round-sm"> </div>
+          <div className="div6 border-round-sm"> </div>
         </div>
-        
-
+        <div className='flex justify-content-center mt-4'>
+          <button className='py-2 px-5 border-1 text-base border-round-xs bg-white hover:bg-primary cursor-pointer border-primary text-primary' onClick={() => { navigate('/gallery') }}>Show All</button>
+        </div>
 
       </div>
+
+
+
+      {/* Testimonals Section */}
+      <div className='responsive bg-primary-100 py-4'>
+        <div className='flex flex-column lg:flex-row gap-4 lg:gap-0'>
+          <div className='w-12 lg:w-6 flex flex-column gap-4'>
+            <h2 className='text-700 text-2xl md:text-4xl text-center lg:text-left'>What Our Travelers<span className='hidden md:inline'><br /></span> Are Saying</h2>
+            <p className='text-color-secondary mt-2 text-center lg:text-left'>Read what our happy travelers have to say! From stunning destinations to seamless planning, their reviews reflect the memorable experiences we deliver. Let their stories inspire your next incredible journey with us!</p>
+          </div>
+          
+          <div className='w-12 lg:w-6 p-2 flex flex-column gap-2'>
+            {
+              testimonals.map((testimonal) => (
+                <TestimonalCard data={testimonal} key={testimonal.id} />
+              ))
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
 
 
     </div>
