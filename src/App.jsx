@@ -12,9 +12,11 @@ import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Page404 from './pages/Page404';
 
+
 const predefinedRoutes = [ '/', '/destination', '/contactus', '/packages', '/blog', '/aboutus', '/offers'];
 import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import {Routes, Route} from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 export default function App() {
@@ -45,6 +47,8 @@ export default function App() {
             </ProtectedRoute>
             }/>
         </Routes>
+
+        {shouldHideNavbar && <Footer/>}
     </div>
   )
 }

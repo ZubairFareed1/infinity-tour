@@ -50,19 +50,22 @@ export default function Home() {
       id: 1,
       name: 'Ethan Parker',
       avatar: avatar1,
-      testimonal: `An unforgettable experience! The tour was well-organized, and the guides were knowledgeable. Can't wait for my next trip!`
+      testimonal: `An unforgettable experience! The tour was well-organized, and the guides were knowledgeable. Can't wait for my next trip!`,
+      rating: 5
     },
     {
       id: 2,
       name: 'Liam Bennett',
       avatar: avatar2,
-      testimonal: `Beautiful destinations and seamless planning. Every detail was taken care of, making it a stress-free and enjoyable adventure.`
+      testimonal: `Beautiful destinations and seamless planning. Every detail was taken care of, making it a stress-free and enjoyable adventure.`,
+      rating: 4.5
     },
     {
       id: 3,
       name: 'Sophia Mitchell',
       avatar: avatar3,
-      testimonal: `Highly recommend this tour service! The itinerary was perfect, and we got to explore hidden gems at every stop.`
+      testimonal: `Highly recommend this tour service! The itinerary was perfect, and we got to explore hidden gems at every stop.`,
+      rating: 5
     }
   ])
   const [searchTour, SetSearchTour] = useState('');
@@ -281,8 +284,8 @@ export default function Home() {
           
           <div className='w-12 lg:w-6 p-2 flex flex-column gap-2'>
             {
-              testimonals.map((testimonal) => (
-                <TestimonalCard data={testimonal} key={testimonal.id} />
+              testimonals.map((testimonal,index) => (
+                <TestimonalCard data={testimonal} key={index} />
               ))
             }
 
@@ -292,7 +295,35 @@ export default function Home() {
 
       </div>
 
+      {/* Get in Touch Section */}
+      <div className='responsive my-6'>
+        <h2 className='text-700 text-2xl md:text-4xl text-center'>Get in Touch with Us</h2>
+        <p className='text-base text-color-secondary text-center mt-2'>Have questions or need more information? We're here to help! Contact us for personalized assistance with your travel plans, and let us guide you toward your next unforgettable adventure.</p>
+        <div className='flex justify-content-center mt-4'>
+          <form className='flex md:flex-row flex-column gap-3 h-full' onSubmit={(e)=>{e.preventDefault()}}>
+              <div className='flex flex-column h-11rem w-18rem justify-content-between'>
+                    <div className="">
+                    <input type="text" placeholder='Name' className='py-3 w-full h-full pl-2 text-base custom-input'/> 
+                    </div>
+                    <div className="">
+                    <input type="email" placeholder='Email' className='py-3 w-full h-full pl-2 text-base custom-input'/> 
+                    </div>
+                    <div className="">
+                    <input type="text" placeholder='Subject' className='py-3 w-full h-full pl-2 text-base custom-input'/> 
+                    </div>
+              </div>
+              <div className='flex flex-column justify-content-between h-11rem w-18rem' >
+                    <div className="h-7rem">
+                    <textarea  placeholder='Message...' className='w-full h-full pl-2 text-base custom-input'/> 
+                    </div>
+                    <button className='py-3 px-5 border-none text-sm border-round-sm bg-primary hover:bg-primary-700 cursor-pointer text-white font-semibold'>Sent Message</button>
 
+
+              </div>
+          </form>
+        </div>
+
+      </div>
 
     </div>
   )
