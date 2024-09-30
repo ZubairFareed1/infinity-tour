@@ -47,7 +47,6 @@
 .custum-input:focus {
     border-color: dodgerblue;
     box-shadow: 0 0 2px dodgerblue;
-    border-radius: 5px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
 

@@ -1,0 +1,12 @@
+.custum-input {
+    outline: 0.5px;
+    transition: border-color 0.3s ease;
+}
+
+.custum-input:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 2px dodgerblue;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}

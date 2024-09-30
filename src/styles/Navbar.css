@@ -20,9 +20,9 @@
       
     }
 
-    nav ul li a.active:hover{
-      background-color: dodgerblue !important;
-      color: white !important;
+    nav ul li a:not(.active):hover{
+      background-color: rgb(213, 232, 250) !important;
+      /* color: white !important; */
         }
 
 nav ul {

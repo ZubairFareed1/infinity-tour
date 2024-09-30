@@ -32,13 +32,13 @@ export default function Navbar() {
         {/* Links */}
         <nav>
           <ul className='flex gap-2 list-none'>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/">Home</NavLink></li>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/destination">Destination</NavLink></li>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/packages">Packages</NavLink></li>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/offers">Offers</NavLink></li>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/blog">Blog</NavLink></li>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/aboutus">About Us</NavLink></li>
-          <li className=''><NavLink className={`no-underline p-2 inline-block hover:bg-primary-100 border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/contactus">Contact Us</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/">Home</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/destination">Destination</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/packages">Packages</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/offers">Offers</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/blog">Blog</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/aboutus">About Us</NavLink></li>
+          <li className=''><NavLink className={`no-underline p-2 inline-block border-round-sm text-base font-semibold text-900 ${({isActive})=>{isActive?"active":''}}`}  to="/contactus">Contact Us</NavLink></li>
           </ul>
         </nav>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <NavLink to="/">
-            <img src={logo} alt="Logo" className='w-5rem'/>
+            <img src='logo2.png' alt="Logo" className='w-10rem'/>
           </NavLink>
         </div>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/aboutus" onClick={toggleMenu}>About Us</NavLink></li>
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/contactus" onClick={toggleMenu}>Contact Us</NavLink></li>
                 <Divider />
-                <Button label="Sign in" className='w-full' size='large' onClick={() => navigate('/signin')} />
+                <Button label="Sign in" className='w-full' size='large' onClick={() => {navigate('/signin');document.body.style='auto'}} />
               </ul>
             </nav>
           </div>
