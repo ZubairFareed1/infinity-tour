@@ -24,20 +24,20 @@ export default function Footer() {
             </div>
           </div>
           <div className='md:w-2 h-full flex flex-column gap-3 align-items-center md:align-items-start'>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/galelry'>Gallery</NavLink>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/faqs'>FAQs</NavLink>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/testimonials'>Testimonials</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/galelry'>Gallery</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/faqs'>FAQs</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/testimonials'>Testimonials</NavLink>
 
           </div>
           <div className='md:w-2 h-full flex flex-column gap-3 align-items-center md:align-items-start'>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/galelry'>Travel Guides</NavLink>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/faqs'>Customer Portal</NavLink>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/testimonials'>Terms and Conditions</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/galelry'>Travel Guides</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/faqs'>Customer Portal</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/testimonials'>Terms and Conditions</NavLink>
 
           </div>
           <div className='md:w-2 h-full flex flex-column gap-3 md:pl-4 align-items-center md:align-items-start'>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/galelry'>About Us</NavLink>
-            <NavLink className='no-underline text-900 text-base font-medium' to='/faqs'>Contact Us</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/galelry'>About Us</NavLink>
+            <NavLink className='no-underline text-900 text-base font-medium hover:underline' to='/faqs'>Contact Us</NavLink>
 
           </div>
           <div className='md:w-3 h-full '>
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
         <Divider />
         <div>
-        <span className='text-color-secondary text-center block'>© 2024 Infinity Travel. All rights reserved.</span>
+        <span className='text-color-secondary text-sm text-center block'>© 2024 Infinity Travel. All rights reserved.</span>
 
         </div>
           

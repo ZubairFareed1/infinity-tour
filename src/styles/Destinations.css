@@ -1,0 +1,44 @@
+.Destinationhero{
+    background-image: url('../assets/destinationhero1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inset-0{
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+
+  .destination-input {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+
+}
+
+@media (min-width: 640px) {
+    .destination-input {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .destination-input {
+        width: 60%;
+    }
+}
+.custum-input {
+    outline: 0.5px;
+    transition: border-color 0.3s ease;
+}
+
+.custum-input:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 2px dodgerblue;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
