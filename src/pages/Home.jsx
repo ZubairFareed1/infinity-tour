@@ -21,6 +21,15 @@ import TestimonalCard from '../components/TestimonalCard';
 export default function Home() {
   const navigate = useNavigate();
   const [searchDestination, setSearchDestination] = useState('');
+
+  const handleSearchDestination = (e) =>{
+    e.preventDefault();
+
+    if(searchDestination.trim() !== ''){
+      navigate(`/destination?search=${encodeURIComponent(searchDestination)}`)
+    }
+
+  }
   const [destination, setDestination] = useState([
     {
       id: 1,
@@ -72,7 +81,7 @@ export default function Home() {
   const handleSearchTour = (e) => {
     e.preventDefault();
     if (searchTour.trim() !== '') {
-      navigate(`/pachages/${searchTour}`)
+      navigate(`/packages?search=${encodeURIComponent(searchTour)}`)
     }
 
   }
@@ -209,8 +218,8 @@ export default function Home() {
             <div className='btn-card-destination flex h-4rem border-1 border-100 border-round-md surface-0 shadow-1'>
               <div className=' w-12 mx-2 my-2 flex align-items-center surface-50 border-round-sm'>
 
-                <form action="" className='flex h-full w-full'>
-                  <input type="text" placeholder='Search Destination...' className='w-full focus:border-none border-none custum-input pl-2 bg-transparent text-base ' />
+                <form onSubmit={handleSearchDestination} className='flex h-full w-full'>
+                  <input type="text" placeholder='Search Destination...' className='w-full focus:border-none border-none custum-input pl-2 bg-transparent text-base ' onChange={(e)=>{setSearchDestination(e.target.value)}} />
                   <button className='py-2 px-4 border-none bg-blue-400 hover:bg-blue-600 border-round-right-sm'>
                     <IoSearchOutline className='text-white text-2xl' />
                   </button>
