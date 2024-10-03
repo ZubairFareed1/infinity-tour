@@ -42,3 +42,27 @@
     border-bottom-right-radius: 0px;
 
 }
+
+.no-outline:focus{
+    outline: none !important;
+    box-shadow: none !important;
+
+}
+
+.no-outline:hover{
+    background-color: gainsboro;
+}
+
+/* Remove the pointing triangle of the overlay panel */
+.p-overlaypanel::before {
+    display: none; /* This hides the triangle */
+}
+
+.p-overlaypanel::after {
+    display: none; /* This hides the triangle */
+}
+.custom-overlaypanel {
+    margin-top: 3px; /* Increase this value to adjust the gap */
+    z-index: 50 !important;
+    
+}

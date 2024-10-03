@@ -235,7 +235,7 @@ export default function Home() {
         <div className="w-12 mt-7 flex flex-wrap ">
           {
             destination.map((item) => (
-              <DestinationCard data={item} key={item.id} />
+              <DestinationCard data={item} key={item.id} forscreen='home'/>
             ))
           }
         </div>

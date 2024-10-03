@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className='hidden fixed top-0 z-5 left-0 w-full lg:flex align-items-center justify-content-between h-6rem responsive navbar-wrapper bg-blue-50 shadow-2'>
+      <div className='hidden fixed top-0 left-0 w-full lg:flex align-items-center justify-content-between h-6rem responsive navbar-wrapper bg-blue-50 shadow-2' style={{zIndex:'1000'}}>
         {/* Logo */}
         <div>
           <NavLink to="/">
@@ -49,7 +49,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile View */}
-      <div className='fixed z-5 top-0 left-0 w-full h-5rem flex lg:hidden justify-content-between align-items-center px-4 bg-blue-50 shadow-2'>
+      <div className='fixed top-0 left-0 w-full h-5rem flex lg:hidden justify-content-between align-items-center px-4 bg-blue-50 shadow-2' style={{zIndex:'1000'}}>
         {/* Logo */}
         <div>
           <NavLink to="/">

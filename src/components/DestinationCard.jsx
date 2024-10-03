@@ -5,7 +5,7 @@ import { IoStar } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 
 
-export default function DestinationCard({ data }) {
+export default function DestinationCard({ data, forscreen }) {
     const navigate = useNavigate();
     function formatReviews(value) {
         if (value >= 1000000) {
@@ -16,10 +16,11 @@ export default function DestinationCard({ data }) {
         return value.toString();
       }
     const { name, rating, reviews, image} = data; // Destructure data
+    
 
     return (
-        <div className="w-12 md:w-6 lg:w-4 inline-block">
-        <div className='mx-4 my-3 md:m-2 surface-card border-1 border-200 shadow-2 border-round-sm overflow-hidden'>
+        <div className={`w-12 md:w-6 ${forscreen==='home'?"lg:w-4":""} inline-block`}>
+        <div className='mx-2 md:mx-3 my-3 md:m-2 surface-card border-1 border-200 shadow-2 border-round-sm overflow-hidden'>
                 <div className='bg-no-repeat bg-cover bg-center h-13rem md:h-10rem ' style={{backgroundImage:`url(${image})`}}>
                 </div>
                 <div className='p-3 flex flex-column gap-4'>
