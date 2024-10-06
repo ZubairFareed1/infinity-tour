@@ -1,5 +1,6 @@
 import { IoMdStar } from "react-icons/io";
 import { IoMdStarHalf } from "react-icons/io";
+
 export function getStars(rating){
 const fullStart = <IoMdStar className="text-yellow-500" />
 const halfStart = <IoMdStarHalf className="text-yellow-500" />
