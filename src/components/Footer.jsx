@@ -4,6 +4,7 @@ import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'
 import twitter from '../assets/twitter.png'
 import { Divider } from 'primereact/divider'
+import logo from '../assets/logo2.png'
 
 import { IoSend } from "react-icons/io5";
 import '../styles/Footer.css'
@@ -15,7 +16,7 @@ export default function Footer() {
         <div className='w-12 h-full flex flex-column md:flex-row gap-3 md:gap-0 mt-4  '>
           <div className='md:w-3 h-full text-center md:text-left'>
             <NavLink className='' to={`/`}>
-              <img src="logo2.png" alt="footer-logo"  className='w-10rem'/>
+              <img src={logo} alt="footer-logo"  className='w-10rem'/>
             </NavLink>
             <div className='flex gap-2 justify-content-center md:justify-content-start'>
               <NavLink to='https://www.facebook.com'><img src={facebook} alt="facebook" className='' style={{width:"22px"}}/></NavLink>

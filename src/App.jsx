@@ -12,18 +12,23 @@ import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Page404 from './pages/Page404';
 
+import ScrollToTop from './components/ScrollTop';
 
-const predefinedRoutes = [ '/', '/destination', '/contactus', '/packages', '/blog', '/aboutus', '/offers'];
+
+const predefinedRoutes = [ '/', '/destination', '/contactus', '/packages', '/blog', '/aboutus', '/offers', '/packages/package_detail/'];
 import ProtectedRoute from './components/ProtectedRoute';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import {Routes, Route} from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
+import PackageDetail from './pages/PackageDetail';
 export default function App() {
   const location = useLocation();
-  const shouldHideNavbar = predefinedRoutes.includes(location.pathname);
+  const shouldHideNavbar = !['/signin', '/signup'].includes(location.pathname);
   return (
     <div className='' style={{backgroundColor:'#F8F8F8'}}>
+
+        <ScrollToTop />
 
        {shouldHideNavbar && <Navbar/>} 
 
@@ -40,6 +45,7 @@ export default function App() {
           <Route path='/aboutus' element={<AboutUs/>}/>
           <Route path='/offers' element={<Offers/>}/>
           <Route path='*' element={<Page404/>}/>
+          <Route path='/packages/package_detail/:id' element={<PackageDetail />} />
           {/* Protected Routes */}
           <Route path='/dashboard' element={
             <ProtectedRoute>

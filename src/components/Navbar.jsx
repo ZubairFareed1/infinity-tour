@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { Button } from 'primereact/button';
 import { Divider } from 'primereact/divider';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo2.png';
 import '../styles/Navbar.css';
 
 
@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <NavLink to="/">
-            <img src='logo2.png' alt="Logo" className='w-10rem'/>
+            <img src={logo} alt="Logo" className='w-10rem'/>
           </NavLink>
         </div>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <NavLink to="/">
-            <img src='logo2.png' alt="Logo" className='w-10rem'/>
+            <img src={logo} alt="Logo" className='w-10rem'/>
           </NavLink>
         </div>
 
@@ -65,7 +65,7 @@ export default function Navbar() {
 
       {/* Side Menu Overlay */}
       
-        <div className={`fixed inset-0 bg-black-alpha-40 blur-filter z-99 transition-all transition-duration-300 ${showMenu ? 'block' : 'hidden'}`} onClick={toggleMenu}>
+        <div className={`fixed inset-0 bg-black-alpha-40 blur-filter  transition-all transition-duration-300 ${showMenu ? 'block' : 'hidden'}`} onClick={toggleMenu} style={{zIndex:1500}}>
           <div className={`fixed top-0 right-0 w-16rem h-full bg-white p-2 shadow-4 z-50 transform transition-transform transition-duration-300 ${showMenu ? 'translate-x-0' : '-translate-x-100'}`} onClick={(e) => e.stopPropagation()}>
             <div className='flex align-items-center justify-content-end mb-3 py-2'>
              
@@ -86,7 +86,7 @@ export default function Navbar() {
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/aboutus" onClick={toggleMenu}>About Us</NavLink></li>
                 <li className=''><NavLink className='no-underline text-base font-semibold text-900 block border-round-md  px-2 py-3' to="/contactus" onClick={toggleMenu}>Contact Us</NavLink></li>
                 <Divider />
-                <Button label="Sign in" className='w-full' size='large' onClick={() => {navigate('/signin');document.body.style='auto'}} />
+                <Button label="Sign in" className='w-full bg-blue-700' size='large' onClick={() => {navigate('/signin');document.body.style='auto';toggleMenu();}} />
               </ul>
             </nav>
           </div>
