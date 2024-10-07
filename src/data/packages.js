@@ -13,8 +13,12 @@ const packages = [
       },
       rating: 4.8,
       reviews: 2500,
+      age: 18,
+      months:["Sep",'Jun'],
+      offerAvailable:true,
       price: "$1500",
-      image: "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1048826978v2-2313x1406.jpg"
+      image: "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1048826978v2-2313x1406.jpg",
+      address: "Paris, France" 
     },
     {
       id: 2,
@@ -30,8 +34,12 @@ const packages = [
       },
       rating: 5.0,
       reviews: 9400,
+      age: 18,
+      months:["Sep",'Jun'],
+      offerAvailable:true,
       price: "$2500",
-      image: "https://thumbs.dreamstime.com/b/atlanta-georgia-usa-downtown-skyline-atlanta-georgia-usa-110765393.jpg"
+      image: "https://thumbs.dreamstime.com/b/atlanta-georgia-usa-downtown-skyline-atlanta-georgia-usa-110765393.jpg",
+      address: "Atlanta, Georgia, USA"
     },
     {
       id: 3,
@@ -47,8 +55,12 @@ const packages = [
       },
       rating: 5.0,
       reviews: 8600,
+      age: 15,
+      months:["Sep",'Jun'],
+      offerAvailable:true,
       price: "$1800",
-      image: "https://www.eyeonasia.gov.sg/images/asean-countries/Indonesia%20snapshot%20cover%20iso.jpg"
+      image: "https://www.eyeonasia.gov.sg/images/asean-countries/Indonesia%20snapshot%20cover%20iso.jpg",
+      address: "Bali, Indonesia"
     },
     {
       id: 4,
@@ -64,8 +76,12 @@ const packages = [
       },
       rating: 4.9,
       reviews: 6000,
+      age: 12,
+      months:["Sep",'Jun'],
+      offerAvailable:true,
       price: "$2200",
-      image: "https://www.travelanddestinations.com/wp-content/uploads/2019/05/Beautiful-places-in-Italy-Burano.jpg"
+      image: "https://www.travelanddestinations.com/wp-content/uploads/2019/05/Beautiful-places-in-Italy-Burano.jpg",
+      address: "Rome, Italy"
     },
     {
       id: 5,
@@ -81,6 +97,7 @@ const packages = [
       },
       rating: 4.7,
       reviews: 4800,
+      offerAvailable:true,
       price: "$1700",
       image: "https://imgproxy.natucate.com/HmhJoiR_WkciuQQilTkPCsa2I1qjjNxzpO0_rVNLX8E/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlemllbGUvNDI4YTYzZWUtMmYzOS00YmFjLTgwY2UtNmY2N2Y4Yzc1NzJlL2MxNDJhZjc3MWUtMTY3OTQ4Njc1MC9zcGFuaWVuLWxhZW5kZXJpbmZvcm1hdGlvbmVuLXN0YWR0LW96ZWFuLXdhc3Nlci1uYXR1Y2F0ZS5qcGc"
     },
