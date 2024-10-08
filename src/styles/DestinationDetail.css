@@ -1,3 +1,6 @@
 .tab {
     transform: translateY(-130px);
 }
+.p-timeline-event-opposite	{
+    display: none;
+}

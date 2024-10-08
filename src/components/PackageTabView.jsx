@@ -1,5 +1,6 @@
 import React from 'react'
 import {TabView, TabPanel} from 'primereact/tabview';
+import {Timeline} from 'primereact/timeline'; 
 import { BsClock } from 'react-icons/bs';
 import { LuCalendarDays } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
@@ -8,12 +9,23 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { Divider } from 'primereact/divider';
 import MyCustomTable from './MyCustomTable';
 
+import itinerary from '../data/itinerary';
+import Itinerray from './Itinerray';
+
+const customizedMarker = (item) => {
+        return (
+            <span className="flex w-2rem h-2rem align-items-center justify-content-center bg-blue-400 text-white border-circle z-1 shadow-1"  >
+                {item.day}
+            </span>
+        );
+    };
+
 
 export default function PackageTabView({packageData}) {
     if(!packageData) {
         return <></>;
     }
-    const {includes, address, age, months, offerAvailable,description ,departureLocation, returnLocation, departureTime, returnTime, wearing } = packageData;
+    const {includes, address, age, months, offerAvailable,description ,departureLocation, returnLocation, departureTime, returnTime, wearing, mapSrc } = packageData;
     const customData = {
         departureLocation: departureLocation,
         returnLocation: returnLocation,
@@ -89,20 +101,14 @@ export default function PackageTabView({packageData}) {
 
 
             <TabPanel header="Itinerary">
-                <p className="m-0">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione voluptatem sequi nesciunt.
-                </p>
+                <div className='mt-2'>
+                    <Timeline marker={customizedMarker} value={itinerary} content={Itinerray} align=''/>
+                </div>
             </TabPanel>
             <TabPanel header="Location">
-                <p className="m-0">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
-
-                    qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                </p>
+                <div className='p-2'>
+                <iframe src={mapSrc}  className='border-0 w-full h-20rem' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </TabPanel>
             <TabPanel header="Photos">
                 <p className="m-0">

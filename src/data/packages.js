@@ -23,7 +23,8 @@ const packages = [
       offerAvailable:true,
       price: "$1500",
       image: "https://www.state.gov/wp-content/uploads/2023/07/shutterstock_1048826978v2-2313x1406.jpg",
-      address: "Paris, France" 
+      address: "Paris, France",
+      mapSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39145.16996770899!2d2.2980126062796957!3d48.86397649911817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e1!3m2!1sen!2s!4v1728414803887!5m2!1sen!2s"
     },
     {
       id: 2,
@@ -49,7 +50,8 @@ const packages = [
       offerAvailable:true,
       price: "$2500",
       image: "https://thumbs.dreamstime.com/b/atlanta-georgia-usa-downtown-skyline-atlanta-georgia-usa-110765393.jpg",
-      address: "Atlanta, Georgia, USA"
+      address: "Atlanta, Georgia, USA",
+      mapSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18980188.68579529!2d-126.07338741221237!3d39.834783425145325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e1!3m2!1sen!2s!4v1728415257787!5m2!1sen!2s"
     },
     {
       id: 3,

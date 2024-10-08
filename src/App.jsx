@@ -24,7 +24,7 @@ import { useLocation } from 'react-router-dom';
 import PackageDetail from './pages/PackageDetail';
 export default function App() {
   const location = useLocation();
-  const shouldHideNavbar = !['/signin', '/signup'].includes(location.pathname);
+  const shouldHideNavbar = !['/signin', '/signup', '/dashboard'].includes(location.pathname);
   return (
     <div className='' style={{backgroundColor:'#F8F8F8'}}>
 
