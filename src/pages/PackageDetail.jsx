@@ -12,10 +12,9 @@ export default function PackageDetail() {
     const handlePackage = ()=>{
         const data = packages.find((item) => item.id == id); // Use find to get the exact object
         setPackageData(data)
-        console.log(data)
         setTimeout(() => {
             setLoading(false)
-        }, 2000)
+        }, 5000)
         // setLoading(false)
     }
     useEffect(()=>{
@@ -27,7 +26,7 @@ export default function PackageDetail() {
     <div className='min-h-screen'>
         <div className='h-5rem lg:h-6rem'></div>
         <div className='border-2 p-10 h-20rem' style={{backgroundImage: `url(${packageData?.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}} >
-            <div className='w-full h-full bg-black-alpha-50 '>
+            <div className='w-full h-full bg-black-alpha-70 '>
                 <h1 className='text-6xl font-bold text-white text-center pt-4'>{packageData?.title}</h1>
             </div>   
             
@@ -39,28 +38,21 @@ export default function PackageDetail() {
                         <PackageTabView packageData={packageData} />
 
                     </div>
-                    <div className='w-12 md:w-3'>
-                        <div className='h-5rem flex flex-column'>
+                    <div className='w-12 md:w-3 mt-5             '>
+                        <div className='h-5rem flex flex-column border-round-sm overflow-hidden'>
                             <div className='bg-white flex-grow-1 flex align-items-center justify-content-center'>
                                 <h2 className='text-blue-500 text-3xl font-bold'>{packageData?.price}</h2>
                             </div>
-                            <div className='bg-blue-500 flex-grow-1'></div>
+                            <div className='bg-blue-500 flex-grow-1 flex justify-content-center align-items-center'>
+                                <span className='text-white font-semibold'>Per Person</span>
+                            </div>
 
                         </div>
 
                     </div>
             </div>
         </div>
-        {loading ? <h1>Loading...</h1> : <div>
-            {/* {packageData.map((item)=>(
-                <div key={item.id}>
-                    <h1>Package Detail</h1>
-                    <h1>{item.name}</h1>
-                    <p>{item.description}</p>
-                    <p>{item.price}</p>
-                </div>
-            ))} */}
-        </div>}
+        
 
       
     </div>

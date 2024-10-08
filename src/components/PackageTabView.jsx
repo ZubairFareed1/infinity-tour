@@ -6,13 +6,22 @@ import { IoLocationOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { Divider } from 'primereact/divider';
+import MyCustomTable from './MyCustomTable';
 
 
 export default function PackageTabView({packageData}) {
     if(!packageData) {
         return <></>;
     }
-    const {includes, address, age, months, offerAvailable,description} = packageData;
+    const {includes, address, age, months, offerAvailable,description ,departureLocation, returnLocation, departureTime, returnTime, wearing } = packageData;
+    const customData = {
+        departureLocation: departureLocation,
+        returnLocation: returnLocation,
+        departureTime: departureTime,
+        returnTime: returnTime,
+        includes: [includes],
+        wear:wearing,
+    }
   return (
     <div>
         <TabView>
@@ -72,7 +81,13 @@ export default function PackageTabView({packageData}) {
                     {description}{' '}{description}
                 </p>
                 <Divider />
+                <MyCustomTable customData={customData}/>
+                <div className='mt-6 mb-4'>
+                    <p className='text-red-400 text-xs md:text-sm'>NOTE: lobortis, amet, dui luctus malesuada lorem. tortor. cursus placerat. dui. faucibus convallis. ex orci porta elementum leo.</p>
+                </div>
             </TabPanel>
+
+
             <TabPanel header="Itinerary">
                 <p className="m-0">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
