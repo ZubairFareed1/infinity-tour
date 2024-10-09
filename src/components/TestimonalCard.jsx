@@ -4,9 +4,9 @@ import { getStars } from '../utils/getStars';
 
 
 export default function TestimonalCard({data}) {
-  const {avatar, name, testimonal, rating} = data;
+  const {avatar, name, testimonal, rating, id} = data;
   return (
-    <div className='flex gap-2 p-3 rounded-3xl border-400 bg-white border-round-md shadow-3'>
+    <div className='flex gap-2 p-3 rounded-3xl border-400 bg-white border-round-md shadow-3' key={id}>
        {/* avatar */}
         <div  className='flex align-items-center'>
           <Avatar image={avatar} shape='circle' size='large'/>

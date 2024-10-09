@@ -10,8 +10,8 @@ export default function Itinerray(item) {
         <p className='text-sm text-color-secondary mb-2'>{item.description}</p>
         <div>
             {
-                item.activities.map((activity) => (
-                    <Tag className='mr-2 bg-transparent border-1 border-300 text-900' rounded value={activity} />
+                item.activities.map((activity, index) => (
+                    <Tag className='mr-2 bg-transparent border-1 border-300 text-900' rounded value={activity} key={index} />
                     
                 ))
             }

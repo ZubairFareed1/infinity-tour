@@ -3,7 +3,6 @@ import { Tag } from 'primereact/tag'
 
 export default function MyCustomTable({ customData }) {
   const { departureLocation, returnLocation, departureTime, returnTime, includes, wear } = customData;
-  console.log(includes)
   return (
     <div className='mt-6'>
       {/* Return location */}

@@ -14,7 +14,7 @@ import Itinerray from './Itinerray';
 
 const customizedMarker = (item) => {
         return (
-            <span className="flex w-2rem h-2rem align-items-center justify-content-center bg-blue-400 text-white border-circle z-1 shadow-1"  >
+            <span className="flex w-2rem h-2rem align-items-center justify-content-center bg-blue-400 text-white border-circle z-1 shadow-1" key={item.day} >
                 {item.day}
             </span>
         );
@@ -89,7 +89,7 @@ export default function PackageTabView({packageData}) {
                         </span>
                     </div>
                 </div>
-                <p className="m-0 mt-4 text-color-secondary">
+                <p className="m-0 mt-4 text-sm md:text-base text-color-secondary">
                     {description}{' '}{description}
                 </p>
                 <Divider />
@@ -111,12 +111,17 @@ export default function PackageTabView({packageData}) {
                 </div>
             </TabPanel>
             <TabPanel header="Photos">
-                <p className="m-0">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                <div className='m-2 border-1'>
+                <div className='w-12 h-15rem flex' >
+                    <div className='h-full w-6 border-1'></div>
+                    <div className='h-full w-6 border-1'>
+                        <div className='w-full border-1'></div>
+                        <div className='w-full border-1'></div>
+                    </div>
 
-                    qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                </p>
+                </div>
+
+                </div>
             </TabPanel>
         </TabView>
       

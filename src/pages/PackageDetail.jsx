@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom';
 import packages from '../data/packages';
 import PackageTabView from '../components/PackageTabView';
 import '../styles/DestinationDetail.css'
+import TestimonalCard from '../components/TestimonalCard';
+import testimonials from '../data/TestimonialData.js';
+import { Button } from 'primereact/button';
+
 
 export default function PackageDetail() {
     const {id} = useParams()
@@ -34,11 +38,27 @@ export default function PackageDetail() {
         </div>
         <div className='responsive'>
             <div className='flex flex-column-reverse md:flex-row w-12 gap-4 tab'>
-                    <div className=' w-12 md:w-9' >
-                        <PackageTabView packageData={packageData} />
+                    <div className=' w-12 md:w-9 flex flex-column gap-4' >
+                        <div>
+                            <PackageTabView packageData={packageData} />
+                        </div>
+                        <div className=' border-1 border-200 border-round-sm bg-white p-4'>
+                            <h2 className='text-xl md:text-2xl text-700'>Tour Reviews</h2>
+                            <div className='flex flex-column gap-4 mt-4'>
+                                {
+                                    testimonials.map((testimonial,index) => (
+                                        <TestimonalCard data={testimonial} key={index} />
+                                    ))
+                                }
+
+                                <Button label="View More" className='w-full' />
+                                
+                            </div>
+
+                        </div>
 
                     </div>
-                    <div className='w-12 md:w-3 mt-5             '>
+                    <div className='w-12 md:w-3 mt-5 flex flex-column gap-8'>
                         <div className='h-5rem flex flex-column border-round-sm overflow-hidden'>
                             <div className='bg-white flex-grow-1 flex align-items-center justify-content-center'>
                                 <h2 className='text-blue-500 text-3xl font-bold'>{packageData?.price}</h2>
@@ -46,6 +66,10 @@ export default function PackageDetail() {
                             <div className='bg-blue-500 flex-grow-1 flex justify-content-center align-items-center'>
                                 <span className='text-white font-semibold'>Per Person</span>
                             </div>
+
+                        </div>
+                        
+                        <div className='w-full h-10rem bg-blue-100 border-1 hidden md:block'>
 
                         </div>
 
