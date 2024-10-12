@@ -4,7 +4,7 @@ import packages from '../data/packages';
 import PackageTabView from '../components/PackageTabView';
 import '../styles/DestinationDetail.css'
 import TestimonalCard from '../components/TestimonalCard';
-import testimonials from '../data/TestimonialData.js';
+import testimonials from '../data/testimonialData.js';
 import { Button } from 'primereact/button';
 
 
